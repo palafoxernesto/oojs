@@ -3,8 +3,12 @@ function onReady(){
     var clock2 = new Clock('clock2', -360, 'Mexico');
     var clock2 = new Clock('clock', +120, 'Russia');
     
- }
- 
+}
+
+Date.prototype.updateSeconds = function(){
+    this.setSeconds(this.getSeconds()+1)
+}
+
 function Clock(id, offset, label) {
 
     offset = offset || 0;
